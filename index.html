@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FoodieVeg - Smart Food Ordering</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+<h2 class="logo">🍔 FoodieVeg</h2>
+
+<input type="text" id="search" placeholder="Search food...">
+
+<div class="navBtns">
+
+<button onclick="toggleDark()">🌙</button>
+<button onclick="toggleCart()">🛒</button>
+
+</div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="heroContent">
+
+<h1>Welcome to FoodieVeg 🍔</h1>
+
+<p class="tagline">Order Delicious Vegetarian Meals Online</p>
+
+<p class="subline">Fresh • Healthy • Fast Delivery</p>
+
+<button class="heroBtn" onclick="scrollMenu()">Explore Menu</button>
+
+</div>
+
+</section>
+
+
+<!-- ================= AI RECOMMEND ================= -->
+
+<section class="recommend">
+
+<h2>🤖 Recommended For You</h2>
+
+<div id="recommended" class="menu"></div>
+
+</section>
+
+
+<!-- ================= MENU ================= -->
+
+<section class="menuSection" id="menuSection">
+
+<h2>Popular Dishes</h2>
+
+<div class="filters">
+
+<button onclick="filterFood('all')">All</button>
+<button onclick="filterFood('pizza')">Pizza</button>
+<button onclick="filterFood('burger')">Burger</button>
+<button onclick="filterFood('indian')">Indian</button>
+<button onclick="filterFood('chinese')">Chinese</button>
+<button onclick="filterFood('drink')">Drinks</button>
+
+</div>
+
+<div id="menu" class="menu"></div>
+
+</section>
+
+
+<!-- ================= FLOATING CART ================= -->
+
+<button class="floatingCart" onclick="toggleCart()">🛒</button>
+
+
+<!-- ================= CART SIDEBAR ================= -->
+
+<div id="cartSidebar" class="cartSidebar">
+
+<div class="cartHeader">
+
+<h2>Your Cart</h2>
+<button class="closeCart" onclick="toggleCart()">✖</button>
+
+</div>
+
+<div id="cartItems"></div>
+
+<div class="cartSummary">
+
+<p>Subtotal: ₹<span id="subtotal">0</span></p>
+<p>Tax (5%): ₹<span id="tax">0</span></p>
+<p>Delivery: ₹<span id="delivery">40</span></p>
+
+<h3>Total ₹<span id="total">0</span></h3>
+
+</div>
+
+<button class="checkoutBtn" onclick="checkout()">Checkout</button>
+
+</div>
+
+
+<!-- ================= FOOD POPUP ================= -->
+
+<div id="popup" class="popup">
+
+<div class="popupContent">
+
+<span class="closePopup" onclick="closePopup()">✖</span>
+
+<img id="popupImg">
+
+<h2 id="popupName"></h2>
+
+<!-- NEW DESCRIPTION TEXT -->
+<p id="popupDesc"></p>
+
+<p id="popupPrice"></p>
+
+<p id="popupRating"></p>
+
+<button onclick="addPopupCart()">Add To Cart</button>
+
+</div>
+
+</div>
+
+<!-- ================= ADD TO CART POPUP ================= -->
+
+<div id="toast" class="toast">
+✔ Item added to cart
+</div>
+
+<!-- ================= JS FILES ================= -->
+
+<script src="foods.js"></script>
+<script src="script.js"></script>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Logo + About -->
+    <div class="footer-section">
+      <h2>🍔 FoodieVeg</h2>
+      <p>Smart food ordering made easy. Fresh, fast & delicious delivered to your door.</p>
+    </div>
+
+    <!-- Links -->
+    <div class="footer-section">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">Cart</a>
+      <a href="#">Contact</a>
+    </div>
+
+    <!-- Support -->
+    <div class="footer-section">
+      <h3>Support</h3>
+      <a href="#">Help Center</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms</a>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="footer-section">
+      <h3>Subscribe</h3>
+      <input type="email" placeholder="Enter your email">
+      <button>Subscribe</button>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2026 FoodieVeg | All Rights Reserved</p>
+  </div>
+
+</footer>
+
+</body>
+</html>
